@@ -1,6 +1,7 @@
 __pycache__/
 .env
 .venv/
+.venv_linux/
 *.pyc
 .pytest_cache/
 web/node_modules/
