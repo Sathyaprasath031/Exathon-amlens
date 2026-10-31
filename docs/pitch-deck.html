@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMLens Pitch Deck - ExaThon India 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+  
+  :root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.2);
+    --accent-green: #34d399;
+    --accent-red: #f87171;
+    --text-primary: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #020617;
+    color: var(--text-primary);
+    padding: 20px;
+  }
+
+  .slide {
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 620px;
+    margin: 0 auto 30px auto;
+    padding: 48px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+  }
+
+  .slide-header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slide-num {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h1 { font-size: 40px; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+  h2 { font-size: 28px; font-weight: 700; color: #fff; }
+  h3 { font-size: 20px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+  p { font-size: 16px; color: var(--text-muted); line-height: 1.6; }
+
+  .badge {
+    background: var(--accent-glow);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .highlight-card {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(30, 41, 59, 1) 100%);
+    border: 1px solid var(--accent);
+  }
+
+  ul { list-style: none; }
+  li {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 24px;
+  }
+  li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 15px;
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  .good { color: var(--accent-green); font-weight: 700; }
+  .bad { color: var(--accent-red); font-weight: 600; }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  @media print {
+    body { background: transparent; padding: 0; }
+    .slide { box-shadow: none; border: none; min-height: 100vh; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Slide 1 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">ExaThon India 2026 · Track 01</span>
+    <span class="badge">Money, Risk & Regulation</span>
+  </div>
+  <div style="margin: auto 0;">
+    <h1>AMLens</h1>
+    <h2 style="color: var(--accent); margin-bottom: 24px;">Behavioral AML Case Triage on Exasol Personal</h2>
+    <p style="font-size: 20px; max-width: 800px; color: #cbd5e1;">
+      A high-precision, in-database SQL graph intelligence system that cuts through alert fatigue to deliver ranked, explainable case dossiers for banking compliance analysts.
+    </p>
+  </div>
+  <div class="footer">
+    <span>Submission by Team AMLens</span>
+    <span>Powered by Exasol Personal & React</span>
+  </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 02 · The Problem</span>
+    <span class="badge">Context</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 20px;">The Compliance Analyst's Daily Struggle</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>The Mandate</h3>
+        <p>Banks must monitor millions of daily transactions to report suspicious activity to FIU-IND. Missing a laundering ring results in severe regulatory penalties and reputational ruin.</p>
+      </div>
+      <div class="card">
+        <h3>The Reality: Alert Fatigue</h3>
+        <p>Analysts are bombarded with thousands of false alerts every single day from crude rules. Each requires human review, while sophisticated multi-account networks quietly slip by.</p>
+      </div>
+    </div>
+    <div class="card highlight-card" style="margin-top: 24px;">
+      <h3 style="color: #fff;">The Core User Story</h3>
+      <p style="color: #cbd5e1; font-style: italic;">
+        "If this worked, an analyst would open a short, prioritized queue each morning where every high-risk case already shows the exact pattern, transaction timeline, evidence sentences, and suggested next investigative steps."
+      </p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>AMLens Pitch Deck</span>
+    <span>Page 2 of 8</span>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 03 · Gap Analysis</span>
+    <span class="badge">Why Existing Rules Fail</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 24px;">Why Traditional Thresholds Break Down</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3 style="color: var(--accent-red);">1. 97%+ False Positives</h3>
+        <p>Threshold rules like "Alert on cash >= ₹10 Lakhs" repeatedly flag innocent businesses, local merchants, and high-net-worth customers depositing ordinary revenue.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--accent-red);">2. Blind to Layering</h3>
+        <p>Launderers rarely send ₹15 Lakhs in one shot. They structure deposits under ₹50k, pass funds through mule accounts, or route money in loops across multiple banks.</p>
+      </div>
+      <div class="card">
+        <h3 style="color: var(--accent-red);">3. Zero Graph Context</h3>
+        <p>Traditional rules evaluate a transaction in total isolation. They cannot see the money velocity, fan-in collectors, or cycles in the money-flow graph.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>AMLens Pitch Deck</span>
+    <span>Page 3 of 8</span>
+  </div>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 04 · Solution</span>
+    <span class="badge">Five Typologies</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 20px;">Five Complex Typologies, One SQL Engine</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>1. Structuring (Smurfing)</h3>
+        <p>Detects multiple deposits clustered just below the ₹50,000 threshold within a 7-day rolling window.</p>
+      </div>
+      <div class="card">
+        <h3>2. Pass-Through Routing</h3>
+        <p>Flags accounts receiving incoming funds and immediately draining >= 85% within 48 hours with minimal retention.</p>
+      </div>
+      <div class="card">
+        <h3>3. Fan-In Mule Collectors</h3>
+        <p>Discovers mule hubs receiving incoming transfers from 5+ distinct accounts and centralizing the balance.</p>
+      </div>
+      <div class="card">
+        <h3>4. Circular Flow (Wash Loops)</h3>
+        <p>Performs recursive graph self-joins to catch closed money loops (Account A -> B -> C -> A) obscuring origins.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 16px;">
+      <h3>5. Segment-Aware Income Mismatch</h3>
+      <p>Flags accounts whose transactional velocity exceeds 300% of their declared monthly income, calibrated differently for retail vs. business segments.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>AMLens Pitch Deck</span>
+    <span>Page 4 of 8</span>
+  </div>
+</div>
+
+<!-- Slide 5 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 05 · Architecture</span>
+    <span class="badge">System Design</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 20px;">End-to-End System Architecture</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>1. Data Generator</h3>
+        <p>Synthetic generator producing millions of transactions, customer segments, and planted ground-truth AML typologies.</p>
+      </div>
+      <div class="card highlight-card">
+        <h3 style="color: #fff;">2. Exasol In-Database Engine</h3>
+        <p>Executes feature aggregation, directed money-flow graph building, detector queries, and 0-100 risk scoring natively in SQL.</p>
+      </div>
+      <div class="card">
+        <h3>3. Analyst Console</h3>
+        <p>FastAPI backend serving a modern React UI with interactive weekly flow charts, plain-English evidence summaries, and live rule tuning.</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent);">
+      Pipeline: generate.py -> Exasol Personal (SQL Features -> Detectors -> Risk Scoring -> Eval) -> FastAPI -> React Console
+    </div>
+  </div>
+  <div class="footer">
+    <span>AMLens Pitch Deck</span>
+    <span>Page 5 of 8</span>
+  </div>
+</div>
+
+<!-- Slide 6 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 06 · Technology</span>
+    <span class="badge">Why Exasol Personal?</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 24px;">Why Exasol Personal Powers AMLens</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Columnar In-Memory Speed</h3>
+        <p>Weekly aggregations and multi-way self-joins across 1.4M+ transactions execute in under a second on commodity local machines.</p>
+      </div>
+      <div class="card">
+        <h3>Zero Data Movement</h3>
+        <p>Rather than exporting data into Python for graph and statistical calculations, all detector logic runs directly in the database.</p>
+      </div>
+      <div class="card">
+        <h3>Dynamic Rule Tuning in SQL</h3>
+        <p>All threshold parameters live in an Exasol <code>config</code> table. Compliance officers tune rules via simple SQL <code>UPDATE</code> statements without code rebuilds.</p>
+      </div>
+      <div class="card">
+        <h3>Cost & Privacy Efficiency</h3>
+        <p>Local Exasol Personal execution keeps sensitive financial transaction data private, secure, and ready for on-premise bank compliance.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>AMLens Pitch Deck</span>
+    <span>Page 6 of 8</span>
+  </div>
+</div>
+
+<!-- Slide 7 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 07 · Validation</span>
+    <span class="badge">Empirical Results</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 16px;">Proven Performance: AMLens vs. Baseline</h2>
+    <p style="margin-bottom: 16px;">Tested on 10,000 accounts, ~1.4M transactions, with 225 planted suspicious entities:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Flagged Cases</th>
+          <th>True Positives</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>False Alarms</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>AMLens (Behavioral SQL Scoring)</strong></td>
+          <td>227</td>
+          <td>225</td>
+          <td class="good">99.1%</td>
+          <td class="good">100.0%</td>
+          <td class="good">2</td>
+        </tr>
+        <tr>
+          <td><strong>Baseline Rule (Cash >= ₹10 Lakhs)</strong></td>
+          <td>561</td>
+          <td>19</td>
+          <td class="bad">3.4%</td>
+          <td class="bad">8.4%</td>
+          <td class="bad">542</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="card highlight-card" style="margin-top: 24px;">
+      <p style="color: #cbd5e1;">
+        <strong>Per-Typology Accuracy:</strong> 100% recall achieved on Circular loops (75/75), Fan-in Mules (40/40), Income Mismatch (40/40), Structuring (40/40), and Pass-Through (30/30).
+      </p>
+    </div>
+  </div>
+  <div class="footer">
+    <span>AMLens Pitch Deck</span>
+    <span>Page 7 of 8</span>
+  </div>
+</div>
+
+<!-- Slide 8 -->
+<div class="slide">
+  <div class="slide-header">
+    <span class="slide-num">Slide 08 · Conclusion</span>
+    <span class="badge">Roadmap & Limitations</span>
+  </div>
+  <div>
+    <h2 style="margin-bottom: 20px;">Honest Boundaries & Next Steps</h2>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Future Roadmap</h3>
+        <ul>
+          <li>Integrate Kafka streaming directly into Exasol tables for near real-time ingestion.</li>
+          <li>Incorporate analyst feedback loop to dynamically adjust typology weights based on audit outcomes.</li>
+          <li>Expand to trade-based money laundering and international wire typologies.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Honest Limitations</h3>
+        <ul>
+          <li><strong>Synthetic Data</strong>: Results validate the algorithmic pipeline and SQL logic; real bank environments will exhibit more noise.</li>
+          <li><strong>Decision Support</strong>: AMLens assists and prioritizes; a human compliance officer always makes final reporting decisions.</li>
+          <li><strong>Business Account Blind Spots</strong>: Relaxed commercial limits require ongoing calibration.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>ExaThon India 2026</span>
+    <span>Open Source under MIT License</span>
+  </div>
+</div>
+
+</body>
+</html>
