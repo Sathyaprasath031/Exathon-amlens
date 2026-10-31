@@ -83,7 +83,7 @@ INCOME_MISMATCH         40                    40.0              40.0            
 
 ## Pitch Deck & Demo Video
 - **Pitch Deck (HTML / Print-ready PDF)**: [docs/pitch-deck.html](docs/pitch-deck.html) | [Markdown](docs/pitch-deck.md)
-- **Demo Video**: [Watch Demo Video (Unlisted YouTube)](https://youtu.be/YOUR_VIDEO_LINK_HERE) *(Replace with your video link)*
+- **Demo Video**: [Watch Demo Video on YouTube](https://youtu.be/fi0CL3FHPtI)
 
 
 ## Repository layout
